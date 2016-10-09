@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<ArrayOfArrayOfArrayOfString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <ArrayOfArrayOfString>
+    <ArrayOfString>
+      <string>c:\perforce\yuriy.hanzha_paywell_dev\pe-chat\pe-chat\controllers\accountcontroller.cs</string>
+    </ArrayOfString>
+    <ArrayOfString>
+      <string>c:\perforce\yuriy.hanzha_paywell_dev\pe-chat\pe-chat\data\entities\user.cs</string>
+    </ArrayOfString>
+    <ArrayOfString>
+      <string>c:\perforce\yuriy.hanzha_paywell_dev\pe-chat\pe-chat\data\entities\message.cs</string>
+    </ArrayOfString>
+    <ArrayOfString>
+      <string>c:\perforce\yuriy.hanzha_paywell_dev\pe-chat\pe-chat\data\managers\applicationusermanager.cs</string>
+    </ArrayOfString>
+    <ArrayOfString>
+      <string>c:\perforce\yuriy.hanzha_paywell_dev\pe-chat\pe-chat\applicationdbcontext.cs</string>
+    </ArrayOfString>
+    <ArrayOfString>
+      <string>C:\Perforce\yuriy.hanzha_Paywell_DEV\PE-Chat\PE-Chat\Startup.cs</string>
+    </ArrayOfString>
+    <ArrayOfString>
+      <string>c:\perforce\yuriy.hanzha_paywell_dev\pe-chat\pe-chat\providers\authorizationserverprovider.cs</string>
+    </ArrayOfString>
+  </ArrayOfArrayOfString>
+</ArrayOfArrayOfArrayOfString>
