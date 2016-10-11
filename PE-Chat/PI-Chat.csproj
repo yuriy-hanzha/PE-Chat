@@ -99,6 +99,14 @@
       <HintPath>..\packages\Microsoft.AspNet.Identity.Owin.2.2.1\lib\net45\Microsoft.AspNet.Identity.Owin.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="Microsoft.AspNet.SignalR.Core, Version=2.2.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.SignalR.Core.2.2.1\lib\net45\Microsoft.AspNet.SignalR.Core.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.SignalR.SystemWeb, Version=2.2.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.SignalR.SystemWeb.2.2.1\lib\net45\Microsoft.AspNet.SignalR.SystemWeb.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
       <Private>True</Private>
@@ -211,11 +219,33 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\loading-bar.min.css" />
+    <Content Include="index.html" />
+    <Content Include="Scripts\angular-local-storage.min.js" />
     <Content Include="Scripts\angular-mocks.js" />
     <Content Include="Scripts\angular-route.js" />
     <Content Include="Scripts\angular-route.min.js" />
+    <Content Include="Scripts\angular-ui-router.min.js" />
     <Content Include="Scripts\angular.js" />
     <Content Include="Scripts\angular.min.js" />
+    <None Include="Scripts\jquery-3.1.1.intellisense.js" />
+    <Content Include="Scripts\Angular\app.js" />
+    <Content Include="Scripts\Angular\Controllers\chatController.js" />
+    <Content Include="Scripts\Angular\Controllers\indexController.js" />
+    <Content Include="Scripts\Angular\Controllers\loginController.js" />
+    <Content Include="Scripts\Angular\Controllers\signupController.js" />
+    <Content Include="Scripts\Angular\Services\authInterceptorService.js" />
+    <Content Include="Scripts\Angular\Services\authService.js" />
+    <Content Include="Scripts\jquery-3.1.1.js" />
+    <Content Include="Scripts\jquery-3.1.1.min.js" />
+    <Content Include="Scripts\jquery-3.1.1.slim.js" />
+    <Content Include="Scripts\jquery-3.1.1.slim.min.js" />
+    <Content Include="Scripts\jquery.signalR-2.2.1.js" />
+    <Content Include="Scripts\jquery.signalR-2.2.1.min.js" />
+    <Content Include="Scripts\loading-bar.min.js" />
+    <Content Include="Views\chat.html" />
+    <Content Include="Views\login.html" />
+    <Content Include="Views\signup.html" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -227,7 +257,14 @@
     <Compile Include="Data\Entities\Message.cs" />
     <Compile Include="Data\Entities\User.cs" />
     <Compile Include="Data\Managers\ApplicationUserManager.cs" />
+    <Compile Include="Hubs\ChatHub.cs" />
+    <Compile Include="Migrations\201610102136291_init.cs" />
+    <Compile Include="Migrations\201610102136291_init.Designer.cs">
+      <DependentUpon>201610102136291_init.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Providers\ApplicationOAuthBearerAuthenticationProvider.cs" />
     <Compile Include="Providers\AuthorizationServerProvider.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>
@@ -235,6 +272,8 @@
     <Content Include="packages.config" />
     <Content Include="Scripts\angular.min.js.map" />
     <Content Include="Scripts\angular-route.min.js.map" />
+    <Content Include="Scripts\jquery-3.1.1.slim.min.map" />
+    <Content Include="Scripts\jquery-3.1.1.min.map" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -245,7 +284,11 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Data\ViewModels\" />
-    <Folder Include="Views\" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201610102136291_init.resx">
+      <DependentUpon>201610102136291_init.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

@@ -17,7 +17,7 @@ namespace PE_Chat.Controllers
         public AccountController()
         {
             _context = new ApplicationDbContext();
-            _userManager = new ApplicationUserManager(new  UserStore<User>(_context));
+            _userManager = new ApplicationUserManager(new UserStore<User>(_context));
         }
 
         // POST api/Account/Register

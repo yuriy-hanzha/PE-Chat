@@ -13,5 +13,11 @@ namespace PE_Chat.Data.Entities
         public string Text { get; set; }
 
         public virtual User Author { get; set; }
+
+        public Message()
+        {
+            Id = new Guid();
+            AddedDate = DateTime.UtcNow;
+        }
     }
 }

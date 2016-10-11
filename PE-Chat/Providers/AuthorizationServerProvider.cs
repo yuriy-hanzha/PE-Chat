@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNet.Identity.EntityFramework;
+using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin.Security.OAuth;
 using PE_Chat.Data.Entities;
 using PE_Chat.Data.Managers;
@@ -20,7 +21,7 @@ namespace PE_Chat.Providers
 
             context.OwinContext.Response.Headers.Add("Access-Control-Allow-Origin", new[] { "*" });
 
-            using (ApplicationUserManager _userManager = new ApplicationUserManager(new UserStore<User>()))
+            using (ApplicationUserManager _userManager = new ApplicationUserManager(new UserStore<User>(new ApplicationDbContext())))
             {
                 User user = await _userManager.FindAsync(context.UserName, context.Password);
 

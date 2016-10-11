@@ -1,0 +1,62 @@
+﻿<!DOCTYPE html>
+<html data-ng-app="AngularAuthApp">
+<head>
+    <title>PI-Chat</title>
+	<meta charset="utf-8" />
+
+    <link href="Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="Content/loading-bar.min.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="navbar navbar-inverse navbar-fixed-top" role="navigation" data-ng-controller="indexController">
+        <div class="container">
+            <div class="navbar-header">
+                <button class="btn btn-success navbar-toggle" data-ng-click="navbarExpanded = !navbarExpanded">
+                    <span class="glyphicon glyphicon-chevron-down"></span>
+                </button>
+                <a class="navbar-brand" href="#/chat">PI-Chat</a>
+            </div>  
+            <div class="collapse navbar-collapse" data-collapse="!navbarExpanded">
+                <ul class="nav navbar-nav navbar-right">
+                    <li data-ng-hide="!authentication.isAuth"><a>Welcome, {{authentication.userName}}</a></li>
+                    <li data-ng-hide="!authentication.isAuth"><a data-ng-click="logOut()">Logout</a></li>
+                    <li data-ng-hide="authentication.isAuth"> <a href="#/login">Login</a></li>
+                    <li data-ng-hide="authentication.isAuth"> <a href="#/signup">Sign Up</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div style="margin-top: 50px;" class="container" style="min-width: 400px">
+        <div data-ng-view></div>
+    </div>
+    <hr />
+    <div id="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <p class="text-muted"></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="Scripts/jquery-3.1.1.min.js"></script>
+    <script src="Scripts/jquery.signalR-2.2.1.min.js"></script>
+    <script src="signalr/hubs"></script>
+    <script src="Scripts/angular.min.js"></script>
+    <script src="Scripts/loading-bar.min.js"></script>
+    <script src="Scripts/angular-route.min.js"></script>
+    <script src="Scripts/angular-ui-router.min.js"></script>
+    <script src="Scripts/angular-local-storage.min.js"></script>
+
+    <script src="Scripts/Angular/app.js"></script>
+
+    <script src="Scripts/Angular/Services/authService.js"></script>
+    <script src="Scripts/Angular/Services/authInterceptorService.js"></script>
+
+    <script src="Scripts/Angular/Controllers/indexController.js"></script>
+    <script src="Scripts/Angular/Controllers/loginController.js"></script>
+    <script src="Scripts/Angular/Controllers/signupController.js"></script>
+    <script src="Scripts/Angular/Controllers/chatController.js"></script>
+
+</body>
+</html>

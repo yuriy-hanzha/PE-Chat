@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<ArrayOfArrayOfArrayOfString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <ArrayOfArrayOfString>
+    <ArrayOfString>
+      <string>c:\users\yuriy\documents\github\pe-chat\pe-chat\views\login.html</string>
+    </ArrayOfString>
+    <ArrayOfString>
+      <string>c:\users\yuriy\documents\github\pe-chat\pe-chat\views\chat.html</string>
+    </ArrayOfString>
+    <ArrayOfString>
+      <string>c:\users\yuriy\documents\github\pe-chat\pe-chat\views\signup.html</string>
+    </ArrayOfString>
+    <ArrayOfString>
+      <string>C:\Users\Yuriy\Documents\GitHub\PE-Chat\PE-Chat\Controllers\AccountController.cs</string>
+    </ArrayOfString>
+    <ArrayOfString>
+      <string>C:\Users\Yuriy\Documents\GitHub\PE-Chat\PE-Chat\Providers\AuthorizationServerProvider.cs</string>
+    </ArrayOfString>
+    <ArrayOfString>
+      <string>C:\Users\Yuriy\Documents\GitHub\PE-Chat\PE-Chat\Scripts\Angular\Controllers\loginController.js</string>
+    </ArrayOfString>
+  </ArrayOfArrayOfString>
+</ArrayOfArrayOfArrayOfString>
