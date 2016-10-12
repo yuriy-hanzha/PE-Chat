@@ -16,7 +16,7 @@
                 <a style="cursor:pointer;" class="navbar-brand" href="#/chat">PI-Chat</a>
             </div>
             <ul class="nav navbar-nav navbar-right">
-                <li data-ng-hide="!authentication.isAuth || !navbarExpanded"><a style="cursor:default;">Welcome, {{authentication.userName}}</a></li>
+                <li data-ng-hide="!authentication.isAuth"><a style="cursor:default;">Welcome, {{authentication.userName}}</a></li>
                 <li data-ng-hide="!authentication.isAuth"><a style="cursor:pointer;" data-ng-click="logOut()">Logout</a></li>
                 <li data-ng-hide="authentication.isAuth"> <a style="cursor:pointer;" href="#/login">Login</a></li>
                 <li data-ng-hide="authentication.isAuth"> <a style="cursor:pointer;" href="#/signup">Sign Up</a></li>
