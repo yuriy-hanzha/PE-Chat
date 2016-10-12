@@ -35,6 +35,7 @@ namespace PE_Chat
                 };
                 map.RunSignalR(hubConfiguration);
             });
+            GlobalHost.HubPipeline.RequireAuthentication();
 
             app.UseWebApi(config);
         }
@@ -46,7 +47,7 @@ namespace PE_Chat
                 AllowInsecureHttp = true,
                 TokenEndpointPath = new PathString("/token"),
                 AccessTokenExpireTimeSpan = TimeSpan.FromDays(1),
-                Provider = new AuthorizationServerProvider()
+                Provider = new AuthorizationServerProvider("self")
             };
 
             app.UseOAuthAuthorizationServer(OAuthServerOptions);

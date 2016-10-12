@@ -16,7 +16,7 @@ namespace PE_Chat.Data.Entities
 
         public Message()
         {
-            Id = new Guid();
+            Id = Guid.NewGuid();
             AddedDate = DateTime.UtcNow;
         }
     }

@@ -14,19 +14,19 @@
                 <button class="btn btn-success navbar-toggle" data-ng-click="navbarExpanded = !navbarExpanded">
                     <span class="glyphicon glyphicon-chevron-down"></span>
                 </button>
-                <a class="navbar-brand" href="#/chat">PI-Chat</a>
+                <a style="cursor:pointer;" class="navbar-brand" href="#/chat">PI-Chat</a>
             </div>  
             <div class="collapse navbar-collapse" data-collapse="!navbarExpanded">
                 <ul class="nav navbar-nav navbar-right">
-                    <li data-ng-hide="!authentication.isAuth"><a>Welcome, {{authentication.userName}}</a></li>
-                    <li data-ng-hide="!authentication.isAuth"><a data-ng-click="logOut()">Logout</a></li>
-                    <li data-ng-hide="authentication.isAuth"> <a href="#/login">Login</a></li>
-                    <li data-ng-hide="authentication.isAuth"> <a href="#/signup">Sign Up</a></li>
+                    <li data-ng-hide="!authentication.isAuth"><a style="cursor:default;">Welcome, {{authentication.userName}}</a></li>
+                    <li data-ng-hide="!authentication.isAuth"><a style="cursor:pointer;" data-ng-click="logOut()">Logout</a></li>
+                    <li data-ng-hide="authentication.isAuth"> <a style="cursor:pointer;" href="#/login">Login</a></li>
+                    <li data-ng-hide="authentication.isAuth"> <a style="cursor:pointer;" href="#/signup">Sign Up</a></li>
                 </ul>
             </div>
         </div>
     </div>
-    <div style="margin-top: 50px;" class="container" style="min-width: 400px">
+    <div class="container" style="min-width: 400px; margin-top: 50px;">
         <div data-ng-view></div>
     </div>
     <hr />
@@ -52,6 +52,8 @@
 
     <script src="Scripts/Angular/Services/authService.js"></script>
     <script src="Scripts/Angular/Services/authInterceptorService.js"></script>
+    <script src="Scripts/Angular/Services/tokensManagerService.js"></script>
+    <script src="Scripts/Angular/Services/chatService.js"></script>
 
     <script src="Scripts/Angular/Controllers/indexController.js"></script>
     <script src="Scripts/Angular/Controllers/loginController.js"></script>

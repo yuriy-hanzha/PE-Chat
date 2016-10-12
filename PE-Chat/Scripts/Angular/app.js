@@ -17,7 +17,13 @@ app.config(function ($routeProvider) {
         templateUrl: "/Views/chat.html"
     });
 
-    $routeProvider.otherwise({ redirectTo: "/login" });
+    $routeProvider.otherwise({ redirectTo: "/chat" });
+});
+
+var serviceBase = "";
+app.constant('ngAuthSettings', {
+    apiServiceBaseUri: serviceBase,
+    clientId: 'ngAuthApp'
 });
 
 app.config(function ($httpProvider) {
@@ -36,3 +42,6 @@ app.config(function ($httpProvider) {
     $httpProvider.defaults.headers.get['Pragma'] = 'no-cache';
 });
 
+app.run(['authService', function (authService) {
+    authService.fillAuthData();
+}]);
