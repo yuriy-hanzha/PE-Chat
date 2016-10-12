@@ -3,7 +3,6 @@
 <head>
     <title>PI-Chat</title>
 	<meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <link href="Content/bootstrap.min.css" rel="stylesheet" />
     <link href="Content/loading-bar.min.css" rel="stylesheet" />
@@ -11,20 +10,15 @@
 <body>
     <div class="navbar navbar-inverse navbar-fixed-top" role="navigation" data-ng-controller="indexController">
         <div class="container">
-            <div class="navbar-header">
-                <button class="btn btn-success navbar-toggle" data-ng-click="navbarExpanded = !navbarExpanded">
-                    <span class="glyphicon glyphicon-chevron-down"></span>
-                </button>
+            <div style="float: left;" class="navbar-header">
                 <a style="cursor:pointer;" class="navbar-brand" href="#/chat">PI-Chat</a>
-            </div>  
-            <div class="collapse navbar-collapse" data-collapse="!navbarExpanded">
-                <ul class="nav navbar-nav navbar-right">
-                    <li data-ng-hide="!authentication.isAuth"><a style="cursor:default;">Welcome, {{authentication.userName}}</a></li>
-                    <li data-ng-hide="!authentication.isAuth"><a style="cursor:pointer;" data-ng-click="logOut()">Logout</a></li>
-                    <li data-ng-hide="authentication.isAuth"> <a style="cursor:pointer;" href="#/login">Login</a></li>
-                    <li data-ng-hide="authentication.isAuth"> <a style="cursor:pointer;" href="#/signup">Sign Up</a></li>
-                </ul>
             </div>
+            <ul class="nav navbar-nav navbar-right">
+                <li data-ng-hide="!authentication.isAuth || !navbarExpanded"><a style="cursor:default;">Welcome, {{authentication.userName}}</a></li>
+                <li data-ng-hide="!authentication.isAuth"><a style="cursor:pointer;" data-ng-click="logOut()">Logout</a></li>
+                <li data-ng-hide="authentication.isAuth"> <a style="cursor:pointer;" href="#/login">Login</a></li>
+                <li data-ng-hide="authentication.isAuth"> <a style="cursor:pointer;" href="#/signup">Sign Up</a></li>
+            </ul>
         </div>
     </div>
     <div class="container" style="min-width: 400px; margin-top: 50px;">

@@ -4708,7 +4708,7 @@ textarea.input-group-sm > .form-control, textarea.input-group-sm > .input-group-
             }
 }
 
-@media (min-width:768px) {
+@media (min-width:8px) {
     .navbar-nav {
         float: left;
         margin: 0;
@@ -4857,7 +4857,7 @@ textarea.input-group-sm > .form-control, textarea.input-group-sm > .input-group-
     }
 }
 
-@media (min-width:768px) {
+@media (min-width:8px) {
     .navbar-left {
         float: left !important;
     }
