@@ -62,7 +62,7 @@ app.controller('loginController', ['$scope', '$location', 'authService',  functi
                 var externalData = { provider: fragment.provider, externalAccessToken: fragment.external_access_token };
                 authService.obtainAccessToken(externalData).then(function (response) {
 
-                    $location.path('/feedback');
+                    $location.path('/chat');
 
                 },
              function (err) {

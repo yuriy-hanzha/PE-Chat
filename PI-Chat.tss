@@ -2,28 +2,7 @@
 <ArrayOfArrayOfArrayOfString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <ArrayOfArrayOfString>
     <ArrayOfString>
-      <string>c:\users\yuriy\documents\github\pe-chat\pe-chat\hubs\chathub.cs</string>
-    </ArrayOfString>
-    <ArrayOfString>
-      <string>c:\users\yuriy\documents\github\pe-chat\pe-chat\scripts\angular\controllers\chatcontroller.js</string>
-    </ArrayOfString>
-    <ArrayOfString>
-      <string>c:\users\yuriy\documents\github\pe-chat\pe-chat\data\viewmodels\messageviewmodel.cs</string>
-    </ArrayOfString>
-    <ArrayOfString>
-      <string>c:\users\yuriy\documents\github\pe-chat\pe-chat\views\chat.html</string>
-    </ArrayOfString>
-    <ArrayOfString>
-      <string>c:\users\yuriy\documents\github\pe-chat\pe-chat\controllers\chatcontroller.cs</string>
-    </ArrayOfString>
-    <ArrayOfString>
-      <string>c:\users\yuriy\documents\github\pe-chat\pe-chat\scripts\angular\controllers\logincontroller.js</string>
-    </ArrayOfString>
-    <ArrayOfString>
-      <string>c:\users\yuriy\documents\github\pe-chat\pe-chat\scripts\angular\services\authservice.js</string>
-    </ArrayOfString>
-    <ArrayOfString>
-      <string>C:\Users\Yuriy\Documents\GitHub\PE-Chat\PE-Chat\index.html</string>
+      <string>C:\Users\Yuriy\Documents\GitHub\PE-Chat\PE-Chat\Scripts\Angular\app.js</string>
     </ArrayOfString>
   </ArrayOfArrayOfString>
 </ArrayOfArrayOfArrayOfString>

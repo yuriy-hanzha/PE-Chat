@@ -1,6 +1,6 @@
 ﻿var app = angular.module('AngularAuthApp', ['ui.router', 'LocalStorageModule', 'angular-loading-bar', 'ngRoute']);
 
-app.config(function ($routeProvider) {
+app.config(function ($routeProvider, $locationProvider) {
 
     $routeProvider.when("/login", {
         controller: "loginController",
@@ -18,6 +18,8 @@ app.config(function ($routeProvider) {
     });
 
     $routeProvider.otherwise({ redirectTo: "/chat" });
+
+    $locationProvider.html5Mode(true);
 });
 
 var serviceBase = "";
